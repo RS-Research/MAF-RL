@@ -1,0 +1,31 @@
+# MovieLens-1M configuration
+
+dataset: ml-1m
+data_path: data/
+
+# Input fields
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: item_id
+TIME_FIELD: timestamp
+
+# Sequence settings
+MAX_ITEM_LIST_LENGTH: 50
+
+# Dataset-specific
+load_col:
+  inter: [user_id, item_id, timestamp]
+  item: [item_id, genre]
+
+# Training
+train_batch_size: 512
+eval_batch_size: 1024
+
+# Evaluation
+metrics: [Recall, NDCG, MRR]
+topk: [5, 10, 20]
+
+# RL tuning
+rl:
+  gamma: 0.99
+  clip_epsilon: 0.2
+  entropy_coef: 0.01
