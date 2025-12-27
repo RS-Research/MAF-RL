@@ -1,0 +1,31 @@
+# Core Python
+numpy>=1.23
+scipy>=1.9
+pandas>=1.5
+
+# Deep Learning
+torch>=2.0
+torchvision>=0.15
+
+# Recommendation Framework
+recbole>=1.2.0
+
+# NLP / Multi-modal (optional but recommended)
+transformers>=4.35
+sentencepiece>=0.1.99
+
+# Utilities
+tqdm>=4.65
+pyyaml>=6.0
+scikit-learn>=1.2
+loguru>=0.7
+
+# Experiment tracking (optional)
+tensorboard>=2.13
+
+# Visualization (optional)
+matplotlib>=3.7
+seaborn>=0.12
+
+# Development & Debugging
+pytest>=7.0
