@@ -1,0 +1,55 @@
+# =====================================================
+# Default configuration for MAF-RL
+# =====================================================
+
+# General
+seed: 42
+reproducibility: true
+device: cuda
+
+# Dataset
+dataset: ml-1m
+data_path: data/
+
+# Fields
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: item_id
+TIME_FIELD: timestamp
+
+# Sequence modeling
+MAX_ITEM_LIST_LENGTH: 50
+ITEM_LIST_LENGTH_FIELD: item_length
+ITEM_LIST_FIELD: item_id_list
+
+# Training
+epochs: 100
+train_batch_size: 512
+eval_batch_size: 1024
+learning_rate: 0.0005
+weight_decay: 1e-5
+
+# Evaluation
+eval_step: 1
+metrics: [Recall, NDCG, MRR]
+topk: [5, 10, 20]
+valid_metric: NDCG@10
+valid_metric_bigger: true
+
+# Logging
+log_wandb: false
+show_progress: true
+
+# RL parameters
+rl:
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_epsilon: 0.2
+  entropy_coef: 0.01
+  value_coef: 0.5
+  ppo_epochs: 4
+  mini_batch_size: 256
+
+# Feature fusion
+fusion:
+  type: gated_attention
+  dropout: 0.1
