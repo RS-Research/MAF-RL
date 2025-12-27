@@ -120,7 +120,7 @@ If you use this code or build upon it, please cite our work:
 ```
 @article{MAFRL2025,
   title={MAF-RL: Multi-Modal Actor–Critic Reinforcement Learning for Sequential Recommendation},
-  author={Zare, Gholamreza and collaborators},
+  author={Mehdi Hosseinzadeh, Rizwan Naqvi, Amir Masoud Rahmani, Gholamreza Zare, Pegah Malekpour Alamdari, Parisa Khoshvaght, Aso Darwesh, Thantrira Porntaveetus, Sang-Woong Lee},
   journal={Under Review},
   year={2025}
 }
