@@ -1,0 +1,25 @@
+# Yelp Dataset Configuration
+
+dataset: yelp
+data_path: data/
+
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: item_id
+TIME_FIELD: timestamp
+
+MAX_ITEM_LIST_LENGTH: 60
+
+load_col:
+  inter: [user_id, item_id, timestamp]
+  item: [item_id, categories]
+
+train_batch_size: 256
+eval_batch_size: 512
+
+metrics: [Recall, NDCG, MRR]
+topk: [5, 10, 20]
+
+rl:
+  gamma: 0.98
+  clip_epsilon: 0.2
+  entropy_coef: 0.015
